@@ -3,6 +3,13 @@
 //Statics
 
 //Intializers
+void Game::initVariables()
+{
+	this->window = NULL;
+	this->fullscreen = false;
+	this->dt = 0.f;
+}
+
 void Game::initWindow()
 {
 	/* Creates a SFML window with options from game_config.ini file */

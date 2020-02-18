@@ -12,6 +12,7 @@ $(BUILDDIR)%.o: $(SOURCEDIR)%.cpp
 	$(CXX) -c $< -o $@ -I $(HEADERS) 
 
 $(BUILDDIR)%.o: $(ENTITYDIR)%.cpp
+	@echo $@
 	$(CXX) -c $< -o $@ 
 
 thegame: $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)Entity.o $(BUILDDIR)Button.o 
