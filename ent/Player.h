@@ -1,0 +1,27 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
+#include "Entity.h"
+
+
+class Player : public Entity
+{
+private:
+	//Variables
+
+	//Initializer
+	void initVariables();
+	void initComponents();
+	
+public:
+	//Constructors/Destructors
+	Player(float x, float y, sf::Texture* texture);
+	virtual ~Player();
+
+	//Components
+
+	//Functions
+};
+
+
+#endif

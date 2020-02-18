@@ -7,10 +7,12 @@ class GameState : public State
 {
 private:
 	//Variables
-	Entity player;
+	Player* player;
 
 	//Initializers
 	void initKeybinds();
+	void initTextures();
+	void initPlayers();
 
 public:
 	//Constructors/Destructors
