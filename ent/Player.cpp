@@ -5,12 +5,12 @@
 //Intializers
 void Player::initVariables()
 {
-
+	
 }
 
 void Player::initComponents()
 {
-
+	this->createMovementComponent(100.f);
 }
 
 //Constructors/Destructors

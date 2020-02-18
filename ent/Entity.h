@@ -1,20 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-#include <iostream>
-#include <ctime>
-#include <cstdlib>
-#include <vector>
-#include <fstream>
-#include <sstream>
-#include <stack>
-#include <map>
-
-#include <SFML/System.hpp> 
-#include <SFML/Window.hpp> 
-#include <SFML/Graphics.hpp> 
-#include <SFML/Audio.hpp> 
-#include <SFML/Network.hpp> 
+#include "../cmp/MovementComponent.h"
 
 class Entity
 {
@@ -29,7 +16,7 @@ protected:
 	sf::Texture* texture; //don't duplicate textures, ever.. just don't
 	sf::Sprite* sprite; //actually don't duplicate sprites either.. pointers ftw
 
-	float movementSpeed;
+	MovementComponent* movementComponent;
 
 	//Initializers
 	
@@ -40,6 +27,7 @@ public:
 
 	//Components
 	void createSprite(sf::Texture* texture);
+	void createMovementComponent(const float maxVelocity);
 
 	//Functions
 	virtual void setPosition(const float x, const float y);

@@ -5,7 +5,7 @@
 //Intializers
 void GameState::initKeybinds()
 {
-	//Import keybinds from file
+	//Import keybindings from file
 	std::ifstream ifs("keymap_game.ini");
 
 	if(ifs.is_open()){
@@ -22,7 +22,9 @@ void GameState::initKeybinds()
 
 void GameState::initTextures()
 {
-	this->textures["PLAYER_IDLE"].loadFromFile("res/images/sprites/player/bow.png");
+	if(!this->textures["PLAYER_IDLE"].loadFromFile("res/images/sprites/player/bow.png")){
+		throw("ERROR::GAME_STATE::COULD_NOT_LOAD_PLAYER_IDLE_TEXTURE");
+	}
 }
 
 void GameState::initPlayers()

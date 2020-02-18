@@ -1,5 +1,6 @@
 HEADERS   := hdr
 ENTITYDIR := ent/
+COMPONENTSDIR := cmp/
 SOURCEDIR := src/
 BUILDDIR  := bin/
 LIBS := -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network
@@ -15,9 +16,13 @@ $(BUILDDIR)%.o: $(ENTITYDIR)%.cpp
 	@echo $@
 	$(CXX) -c $< -o $@ 
 
-thegame: $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)Entity.o $(BUILDDIR)Player.o $(BUILDDIR)Button.o 
+$(BUILDDIR)%.o: $(COMPONENTSDIR)%.cpp
+	@echo $@
+	$(CXX) -c $< -o $@ 
+
+thegame: $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)Entity.o $(BUILDDIR)Player.o $(BUILDDIR)MovementComponent.o $(BUILDDIR)Button.o 
 	@echo "** Building the game"
-	$(CXX) -o thegame $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)Entity.o $(BUILDDIR)Player.o $(BUILDDIR)Button.o $(LIBS)
+	$(CXX) -o thegame $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)Entity.o $(BUILDDIR)Player.o $(BUILDDIR)MovementComponent.o $(BUILDDIR)Button.o $(LIBS)
 
 clean:
 	@echo "** Removing object files and executable..."
