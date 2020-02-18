@@ -27,7 +27,6 @@ public:
 	virtual ~MainMenuState();
 
 	//Functions
-	void endOfLifeState();
 	void updateInput(const float& dt);
 	void updateButtons();
 	void update(const float& dt);

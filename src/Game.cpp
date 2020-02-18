@@ -114,7 +114,6 @@ void Game::update()
 		this->states.top()->update(this->dt);
 
 		if(this->states.top()->getQuit()){
-			this->states.top()->endOfLifeState();
 			delete this->states.top();
 			this->states.pop();
 		}

@@ -22,9 +22,13 @@ private:
 	//Variables
 
 	//Initializers
+	void initVariables();
+
 protected:
 	//Variables
-	sf::RectangleShape shape;
+	sf::Texture* texture; //don't duplicate textures, ever.. just don't
+	sf::Sprite* sprite; //actually don't duplicate sprites either.. pointers ftw
+
 	float movementSpeed;
 
 	//Initializers
@@ -33,6 +37,9 @@ public:
 	//Constructors/Destructors
 	Entity();
 	virtual ~Entity();
+
+	//Components
+	void createSprite(sf::Texture* texture);
 
 	//Functions
 	virtual void move(const float& dt, const float x, const float y);

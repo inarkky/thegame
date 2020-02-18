@@ -18,7 +18,6 @@ public:
 	virtual ~GameState();
 
 	//Functions
-	void endOfLifeState();
 	void updateInput(const float& dt);
 	void update(const float& dt);
 	void render(sf::RenderTarget* target = nullptr);
