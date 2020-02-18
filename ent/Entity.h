@@ -13,8 +13,7 @@ private:
 
 protected:
 	//Variables
-	sf::Texture* texture; //don't duplicate textures, ever.. just don't
-	sf::Sprite* sprite; //actually don't duplicate sprites either.. pointers ftw
+	sf::Sprite sprite; 
 
 	MovementComponent* movementComponent;
 
@@ -26,7 +25,7 @@ public:
 	virtual ~Entity();
 
 	//Components
-	void createSprite(sf::Texture* texture);
+	void setTexture(sf::Texture& texture);
 	void createMovementComponent(const float maxVelocity);
 
 	//Functions

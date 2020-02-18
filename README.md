@@ -1,5 +1,5 @@
 #Instalation
-run `make` to build binaries, then `make install` to copy the game to /usr/bin so that it can be run from terminal
+run `make` to build binaries, then `make install` to create symlink to game in /usr/bin so that it can be run from terminal
 
 #Uninstallation
 just run `make uninstall` to remove the game
