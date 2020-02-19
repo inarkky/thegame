@@ -8,3 +8,9 @@ just run `make uninstall` to remove the game
 - optimization - edit makefile to compile with -O2 flag
 - installation - edit makefile to create symlink in /usr/bin instead of copying the whole game.. adjust `make clean` and `make uninstall` to fallow changes
 	- sudo ln -s "$(pwd)"/thegame /usr/bin/thegame
+
+#GIT flags
+- `FEATURE`  - add new funcionality
+- `REFACTOR` - code cleanup/optimization
+- `FIX` 	 - errors fixes
+- `PATCH` 	 - update existing functionality
