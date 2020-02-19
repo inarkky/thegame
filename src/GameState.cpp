@@ -22,7 +22,7 @@ void GameState::initKeybinds()
 
 void GameState::initTextures()
 {
-	if(!this->textures["PLAYER_SHEET"].loadFromFile("res/images/sprites/player/IDLE_LEFT_SHEET.png")){
+	if(!this->textures["PLAYER_SHEET"].loadFromFile("res/images/sprites/player/PLAYER_SHEET.png")){
 		throw("ERROR::GAME_STATE::COULD_NOT_LOAD_PLAYER_TEXTURE");
 	}
 }
