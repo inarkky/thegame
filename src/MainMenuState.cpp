@@ -26,29 +26,29 @@ void MainMenuState::initBackground()
 void MainMenuState::initFonts()
 {
 	if(!this->font.loadFromFile("res/fonts/Dosis-Light.ttf")){
-		throw("ERROR::MAINMENUSTATE::COULD NOT LOAD FONT");
+		throw("ERROR::MAINMENUSTATE::COULD_NOT_LOAD_FONT");
 	}
 }
 
 void MainMenuState::initButtons()
 {
-	this->buttons["GAME_STATE"] = new Button(600, 300, 150, 50, 
-		&this->font, "New Game", 36,
+	this->buttons["GAME_STATE"] = new Button(600, 375, 150, 50, 
+		&this->font, "New Game", 32,
 		sf::Color(100, 100, 100, 200), sf::Color(150, 150, 150, 250), sf::Color(20, 20, 20, 50),
 		sf::Color(100, 100, 100, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
 
-	this->buttons["SETTINGS"] = new Button(600, 375, 150, 50, 
-		&this->font, "Settings", 36,
+	this->buttons["SETTINGS"] = new Button(600, 425, 150, 50, 
+		&this->font, "Settings", 32,
 		sf::Color(100, 100, 100, 200), sf::Color(150, 150, 150, 250), sf::Color(20, 20, 20, 50),
 		sf::Color(100, 100, 100, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
 
-	this->buttons["EDITOR_STATE"] = new Button(600, 450, 150, 50, 
-		&this->font, "Editor", 36,
+	this->buttons["EDITOR_STATE"] = new Button(600, 475, 150, 50, 
+		&this->font, "Editor", 32,
 		sf::Color(100, 100, 100, 200), sf::Color(150, 150, 150, 250), sf::Color(20, 20, 20, 50),
 		sf::Color(100, 100, 100, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
 
 	this->buttons["EXIT_STATE"] = new Button(600, 525, 150, 50, 
-		&this->font, "Quit", 36,
+		&this->font, "Quit", 32,
 		sf::Color(100, 100, 100, 200), sf::Color(150, 150, 150, 250), sf::Color(20, 20, 20, 50),
 		sf::Color(100, 100, 100, 0), sf::Color(150, 150, 150, 0), sf::Color(20, 20, 20, 0));
 

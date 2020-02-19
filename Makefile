@@ -29,8 +29,9 @@ clean:
 	rm -f thegame $(BUILDDIR)*.o
 
 install:
-	@echo '** Installing...'
-	cp thegame /usr/bin/
+	@echo '** Creating symlink...'
+	ln -s thegame /usr/bin/thegame
+	@echo '** Game installed'
 
 uninstall:
 	@echo '** Uninstalling...'

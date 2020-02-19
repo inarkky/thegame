@@ -10,7 +10,7 @@ void Player::initVariables()
 
 void Player::initComponents()
 {
-	this->createMovementComponent(300.f, 15.f, 5.f);
+	this->createMovementComponent(200.f, 15.f, 5.f);
 }
 
 //Constructors/Destructors
