@@ -10,9 +10,9 @@ $(BUILDDIR)%.o: $(SOURCEDIR)%.cpp
 	@echo $@
 	$(CXX) -c $< -o $@ -I $(HEADERS) 
 
-thegame: $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)Entity.o $(BUILDDIR)Player.o $(BUILDDIR)MovementComponent.o $(BUILDDIR)AnimationComponent.o $(BUILDDIR)Button.o 
+thegame: $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)EditorState.o $(BUILDDIR)Entity.o $(BUILDDIR)Player.o $(BUILDDIR)MovementComponent.o $(BUILDDIR)AnimationComponent.o $(BUILDDIR)Button.o 
 	@echo "** Building the game"
-	$(CXX) -o thegame $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)Entity.o $(BUILDDIR)Player.o $(BUILDDIR)MovementComponent.o $(BUILDDIR)AnimationComponent.o $(BUILDDIR)Button.o $(LIBS)
+	$(CXX) -o thegame $(BUILDDIR)main.o $(BUILDDIR)Game.o $(BUILDDIR)State.o $(BUILDDIR)GameState.o $(BUILDDIR)MainMenuState.o $(BUILDDIR)EditorState.o $(BUILDDIR)Entity.o $(BUILDDIR)Player.o $(BUILDDIR)MovementComponent.o $(BUILDDIR)AnimationComponent.o $(BUILDDIR)Button.o $(LIBS)
 
 clean:
 	@echo "** Removing object files and executable..."

@@ -103,9 +103,16 @@ void MainMenuState::updateButtons()
 		it.second->update(this->mousePosView);
 	}
 
-	//Start ew game
+	//Start new game
 	if(this->buttons["GAME_STATE"]->isPressed()){
 		this->states->push(new GameState(this->window, this->supportedKeys, this->states));
+	}
+
+	//Settings
+
+	//Editor
+	if(this->buttons["EDITOR_STATE"]->isPressed()){
+		this->states->push(new EditorState(this->window, this->supportedKeys, this->states));
 	}
 
 	//Quit game
