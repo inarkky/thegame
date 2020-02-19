@@ -4,7 +4,7 @@
 
 //Constructor/Destructor
 AnimationComponent::AnimationComponent(sf::Sprite& sprite, sf::Texture& texture_sheet)
-	:sprite(sprite), textureSheet(texture_sheet)
+	:sprite(sprite), textureSheet(texture_sheet), lastAnimation(NULL)
 {
 
 }
@@ -35,5 +35,16 @@ void AnimationComponent::addAnimation(
 
 void AnimationComponent::play(const std::string key, const float& dt)
 {
+	if(this->lastAnimation != this->animation[key]){
+		
+		if(this->lastAnimation != NULL)
+			this->lastAnimation = this->animation[key];
+		else{
+			this->lastAnimation->reset();
+			this->lastAnimation = this->animation[key];
+		}	
+	}
+
 	this->animations[key]->play(dt);
+	
 }
