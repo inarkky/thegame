@@ -1,8 +1,8 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-#include "../cmp/MovementComponent.h"
-#include "../cmp/AnimationComponent.h"
+#include "MovementComponent.h"
+#include "AnimationComponent.h"
 
 class Entity
 {
