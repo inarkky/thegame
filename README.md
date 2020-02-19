@@ -1,4 +1,4 @@
-#THEGAME
+# THEGAME
 
 ### Instalation
 run `make` to build binaries, then `make install` to create symlink to game in /usr/bin so that it can be run from terminal
