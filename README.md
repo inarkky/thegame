@@ -1,15 +1,18 @@
-# Instalation
+#THEGAME
+
+### Instalation
 run `make` to build binaries, then `make install` to create symlink to game in /usr/bin so that it can be run from terminal
 
-# Uninstallation
+### Uninstallation
 just run `make uninstall` to remove the game
 
-# TODO
+### TODO
 - optimization - edit makefile to compile with -O2 flag
-- installation - edit makefile to create symlink in /usr/bin instead of copying the whole game.. adjust `make clean` and `make uninstall` to fallow changes
-	- sudo ln -s "$(pwd)"/thegame /usr/bin/thegame
+- installation - edit makefile to create symlink in /usr/bin instead of copying the whole game.. adjust `make clean` and `make uninstall` to follow changes
+	- `sudo ln -s "$(pwd)"/thegame /usr/bin/thegame`
+	- longterm goal - make proper `makefile` script to place all of the game files to where they should be
 
-# GIT flags
+### GIT flags
 - `FEATURE`  - add new funcionality
 - `REFACTOR` - code cleanup/optimization
 - `FIX` 	 - errors fixes
