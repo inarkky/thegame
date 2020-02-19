@@ -22,14 +22,14 @@ void GameState::initKeybinds()
 
 void GameState::initTextures()
 {
-	if(!this->textures["PLAYER_IDLE"].loadFromFile("res/images/sprites/player/bow.png")){
-		throw("ERROR::GAME_STATE::COULD_NOT_LOAD_PLAYER_IDLE_TEXTURE");
+	if(!this->textures["PLAYER_SHEET"].loadFromFile("res/images/sprites/player/IDLE_LEFT_SHEET.png")){
+		throw("ERROR::GAME_STATE::COULD_NOT_LOAD_PLAYER_TEXTURE");
 	}
 }
 
 void GameState::initPlayers()
 {
-	this->player = new Player(0, 0, this->textures["PLAYER_IDLE"]);
+	this->player = new Player(0, 0, this->textures["PLAYER_SHEET"]);
 }
 
 //Constructors/Destructors

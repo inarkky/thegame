@@ -15,12 +15,13 @@ private:
 	
 public:
 	//Constructors/Destructors
-	Player(float x, float y, sf::Texture& texture);
+	Player(float x, float y, sf::Texture& texture_sheet);
 	virtual ~Player();
 
 	//Components
 
 	//Functions
+	virtual void update(const float& dt);
 };
 
 
