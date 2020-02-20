@@ -4,7 +4,7 @@
 
 //Constructor/Destructor
 AnimationComponent::AnimationComponent(sf::Sprite& sprite, sf::Texture& texture_sheet)
-	:sprite(sprite), textureSheet(texture_sheet), lastAnimation(NULL)
+	:sprite(sprite), textureSheet(texture_sheet), lastAnimation(NULL), priorityAnimation(NULL)
 {
 
 }
@@ -33,7 +33,7 @@ void AnimationComponent::addAnimation(
 	);
 }
 
-void AnimationComponent::play(const std::string key, const float& dt)
+void AnimationComponent::play(const std::string key, const float& dt, const bool priority)
 {
 	if(this->lastAnimation != this->animations[key]){
 		
@@ -49,7 +49,7 @@ void AnimationComponent::play(const std::string key, const float& dt)
 	
 }
 
-void AnimationComponent::play(const std::string key, const float &dt, const float& modifier, const float& modifier_max)
+void AnimationComponent::play(const std::string key, const float &dt, const float &modifier, const float &modifier_max, const bool priority)
 {
 	if (this->lastAnimation != this->animations[key]){
 
@@ -61,5 +61,5 @@ void AnimationComponent::play(const std::string key, const float &dt, const floa
 		}
 	}
 
-	this->animations[key]->play(dt);
+	this->animations[key]->play(dt, abs(modifier / modifier_max)); //Use overloaded play()
 }
