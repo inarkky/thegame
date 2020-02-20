@@ -8,7 +8,7 @@ class Player : public Entity
 {
 private:
 	//Variables
-
+	bool attacking;
 	//Initializer
 	void initVariables();
 	void initComponents();
