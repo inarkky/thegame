@@ -4,15 +4,19 @@ BUILDDIR  := bin/
 LIBS := -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network
 OBJ :=  $(BUILDDIR)main.o \
 		$(BUILDDIR)Game.o \
+		\
 		$(BUILDDIR)State.o \
 		$(BUILDDIR)GameState.o \
 		$(BUILDDIR)MainMenuState.o \
 		$(BUILDDIR)EditorState.o \
+		\
 		$(BUILDDIR)Entity.o \
 		$(BUILDDIR)Player.o \
+		\
 		$(BUILDDIR)MovementComponent.o \
 		$(BUILDDIR)AnimationComponent.o \
 		$(BUILDDIR)HitboxComponent.o \
+		\
 		$(BUILDDIR)Button.o 
 CXX  := g++
 PROG := thegame
