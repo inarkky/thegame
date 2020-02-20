@@ -2,7 +2,7 @@ HEADERS   := lib
 SOURCEDIR := src/
 BUILDDIR  := bin/
 LIBS := -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network
-OBJ :=  $(BUILDDIR)main.o \
+OBJ := 	$(BUILDDIR)main.o \
 		$(BUILDDIR)Game.o \
 		\
 		$(BUILDDIR)State.o \
