@@ -13,7 +13,11 @@ just run `make uninstall` to remove the game
 	- longterm goal - make proper `makefile` script to place all of the game files to where they should be
 
 ### GIT flags
-- `FEATURE`  - add new funcionality
-- `REFACTOR` - code cleanup/optimization
-- `FIX` 	 - errors fixes
-- `PATCH` 	 - update existing functionality
+- `FEAT` - new feature
+- `FIX` - bug fix
+- `DOCS` - changes to documentation
+- `STYLE` - formatting, missing semi colons, etc; no code change
+- `REFACTOR` - refactoring production code
+- `TEST` - adding missing tests, refactoring tests; no production code change
+- `CHORE` - updating grunt tasks etc; no production code change
+
