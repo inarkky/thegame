@@ -17,7 +17,9 @@ OBJ := 	$(BUILDDIR)main.o \
 	$(BUILDDIR)AnimationComponent.o \
 	$(BUILDDIR)HitboxComponent.o \
 	\
-	$(BUILDDIR)Button.o 
+	$(BUILDDIR)Button.o \
+	\
+	$(BUILDDIR)Tile.o
 CXX  := g++
 PROG := thegame
 
