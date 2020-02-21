@@ -45,7 +45,8 @@ void Player::update(const float& dt)
 		this->attacking = true;
 	}*/
 	if(this->attacking){
-		this->animationComponent->play("ATTACK", dt, true);
+		if(this->animationComponent->play("ATTACK", dt, true))
+			this->attacking = false;
 	}
 	if(this->movementComponent->getState(IDLE)){
 		this->animationComponent->play("IDLE", dt);
