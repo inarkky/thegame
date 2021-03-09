@@ -11,6 +11,5 @@ Simple 2D tiling game engine written from scratch in c++/sfml
 just run `make uninstall`
 
 ### TODO
-- optimization - edit makefile to compile with -O2 flag
-- add multiplayer support
+- lots of things I don't have time for right now
 
